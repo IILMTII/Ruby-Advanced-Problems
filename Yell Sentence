@@ -1,0 +1,7 @@
+def yell_sentence(sent)
+  arr= sent.split(" ")
+  new= arr.map { |word| word+"!"}
+  print new.join(" ")  
+end
+
+puts yell_sentence("I have a bad feeling about this") #=> "I! HAVE! A! BAD! FEELING! ABOUT! THIS!"
