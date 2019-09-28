@@ -1,0 +1,21 @@
+def most_vowels(sentence)
+ new=sentence.split(" ")
+  new_h=Hash.new(0)
+  new.each do |word|
+  new_h[word]=new_hash(word)
+  end
+  sort = new_h.sort_by {|k,v| v}
+  return sort[-1][0]
+end
+def new_hash(word)
+  vowels="aeiou"
+   hash={}
+  count=0
+  word.each_char do |char|
+  if vowels.include?(char)
+     count+=1
+   end
+end
+    return count
+end
+print most_vowels("what a wonderful life") #=> "wonderful"
