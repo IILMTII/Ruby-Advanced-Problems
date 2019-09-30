@@ -1,0 +1,18 @@
+def triple_sequence(start, length)
+ i=0
+  new=1
+  arr=[]
+  arr<<start
+  while i<length-1
+    new=start*3
+    arr<<new
+    start=new
+    i+=1
+  end
+  return arr
+end
+
+print triple_sequence(2, 4) # => [2, 6, 18, 54]
+puts
+print triple_sequence(4, 5) # => [4, 12, 36, 108, 324]
+puts
